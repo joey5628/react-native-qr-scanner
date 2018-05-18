@@ -1,0 +1,27 @@
+{
+  "name": "qrScannerRN",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest"
+  },
+  "dependencies": {
+    "react-native-camera": "git+https://git@github.com/react-native-community/react-native-camera"
+  },
+  "devDependencies": {
+    "react": "16.3.1",
+    "react-native": "0.55.4",
+    "@types/react": "^16.3.14",
+    "@types/react-native": "^0.55.14",
+    "babel-jest": "22.4.3",
+    "babel-preset-react-native": "4.0.0",
+    "jest": "22.4.3",
+    "react-native-typescript-transformer": "^1.2.5",
+    "react-test-renderer": "16.3.1",
+    "typescript": "^2.8.3"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
