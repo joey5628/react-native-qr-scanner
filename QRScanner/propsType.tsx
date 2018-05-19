@@ -19,8 +19,13 @@ export default interface IPropsType {
 
     isShowScanBar?: boolean;
     scanBar?: React.ReactNode;
-    scanBarColor?: string;
+    // scanBarColor?: string;
     scanBarAnimateTime?: number;
 
+    openLight?: boolean;
+
     onBarCodeRead?: (_x?: any) => void;
+
+    renderTopView?: () => React.ReactNode;
+    renderBottomView?: () => React.ReactNode;
 }
