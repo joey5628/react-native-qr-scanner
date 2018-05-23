@@ -16,11 +16,12 @@ import IPropsType from './propsType'
 import styles from './styles'
 
 const { width: deviceWidth, height: deviceHeight } = Dimensions.get('window');
+
 export default class QRScanner extends React.Component<IPropsType, any> {
     static defaultProps = {
         top: 165,
-        width: 260,
-        height: 260,
+        width: 250,
+        height: 250,
 
         borderColor: '#24A8E8',
         borderWidth: StyleSheet.hairlineWidth,
@@ -96,13 +97,32 @@ export default class QRScanner extends React.Component<IPropsType, any> {
         return null
     }
 
+    getWidth = (width:number) => {
+        if (typeof width === 'number') {
+            const designWidth = 375;
+            return Math.round(width * deviceWidth / designWidth)
+        }
+        return width;
+    };
+
+    getHeight = (height:number) => {
+        if (typeof height === 'number') {
+            const designHeight = 667;
+            return Math.round(height * deviceHeight / designHeight)
+        }
+        return height;
+    };
 
     render() {
         const {
-            top, width = 250, height = 250, maskColor, borderColor, borderWidth,
+            top: preTop = 163, width: preWidth = 250, height: preHeight = 250, maskColor, borderColor, borderWidth,
             cornerSize, cornerColor, cornerBorderWidth, openLight,
             renderTopView, renderBottomView
         } = this.props;
+
+        let top = this.getHeight(preTop);
+        let width = this.getWidth(preWidth);
+        let height = this.getHeight(preHeight);
 
         const scanTop = top ? top : (deviceHeight - height) / 2;
         const scanBottom = deviceHeight - scanTop - height;

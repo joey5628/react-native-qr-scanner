@@ -6,6 +6,7 @@
 import React from 'react'
 import { Component } from 'react';
 import {
+    Dimensions,
     Platform,
     StyleSheet,
     Text,
@@ -16,6 +17,8 @@ import QRScanner from './QRScanner'
 
 
 type Props = {};
+
+const { width: deviceWidth, height: deviceHeight } = Dimensions.get('window');
 export default class App extends Component<Props> {
     state = {
         openLight: false
@@ -67,7 +70,7 @@ const styles = StyleSheet.create({
     },
     header: {
         paddingTop: (Platform.OS === 'ios') ? 20 : 0,
-        height: 70,
+        height: (Platform.OS === 'ios') ? 70 : 50,
         backgroundColor: '#f8f8f8',
         justifyContent: 'center',
         alignItems: 'center'
