@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "test": "jest",
+    "compile": "rm -rf lib && tsc --skipLibCheck",
+    "prepublish": "npm run compile"
   },
   "dependencies": {
     "react-native-camera": "git+https://git@github.com/react-native-community/react-native-camera"
