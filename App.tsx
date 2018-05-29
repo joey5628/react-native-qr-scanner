@@ -36,7 +36,27 @@ export default class App extends Component<Props> {
         console.log('onBarCodeRead event:', event)
     };
 
+    getWidth = (width:number) => {
+        if (typeof width === 'number') {
+            const designWidth = 375;
+            return Math.round(width * deviceWidth / designWidth)
+        }
+        return width;
+    };
+
+    getHeight = (height:number) => {
+        if (typeof height === 'number') {
+            const designHeight = 667;
+            return Math.round(height * deviceHeight / designHeight)
+        }
+        return height;
+    };
+
     render() {
+        let top = this.getHeight(160);
+        const height = this.getHeight(250);
+        const width = this.getWidth(250);
+
         const { openLight } = this.state;
         return (
             <View style={styles.container}>
@@ -44,6 +64,9 @@ export default class App extends Component<Props> {
                     <Text style={styles.headerText}>扫码组件</Text>
                 </View>
                 <QRScanner
+                    top={top}
+                    height={height}
+                    width={width}
                     openLight={openLight}
                     onBarCodeRead={this.onBarCodeRead}
                     renderBottomView={()=>{
