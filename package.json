@@ -27,6 +27,7 @@
     "preset": "react-native"
   },
   "files": [
-    "lib"
+    "lib",
+    "imgs"
   ]
 }
