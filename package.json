@@ -22,6 +22,7 @@
     "typescript": "^2.8.3",
     "react-native-camera": "git+https://git@github.com/react-native-community/react-native-camera"
   },
+  "main": "./lib/index.js",
   "jest": {
     "preset": "react-native"
   },
