@@ -85,7 +85,7 @@ export default class QRScanner extends React.Component<IPropsType, any> {
                 scanBarDom = scanBar;
             } else {
                 scanBarDom = (
-                    <Image style={styles.scanBar} source={require('./imgs/line.png')}/>
+                    <Image style={styles.scanBar} source={require('../imgs/line.png')}/>
                 )
             }
             return (
