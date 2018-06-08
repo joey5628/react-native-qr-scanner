@@ -11,7 +11,7 @@ import {
     Image,
     Easing,
 } from "react-native";
-import { RNCamera } from 'react-native-camera';
+import { RNCamera } from 'yh-react-native-camera';
 import IPropsType from './propsType'
 import styles from './styles'
 

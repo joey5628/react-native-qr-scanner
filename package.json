@@ -10,17 +10,18 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "react": "16.3.1",
-    "react-native": "0.55.4",
     "@types/react": "^16.3.14",
     "@types/react-native": "^0.55.14",
     "babel-jest": "22.4.3",
     "babel-preset-react-native": "4.0.0",
     "jest": "22.4.3",
+    "react": "16.3.1",
+    "react-native": "0.55.4",
+    "react-native-camera": "git+https://git@github.com/react-native-community/react-native-camera",
     "react-native-typescript-transformer": "^1.2.5",
     "react-test-renderer": "16.3.1",
     "typescript": "^2.8.3",
-    "react-native-camera": "git+https://git@github.com/react-native-community/react-native-camera"
+    "yh-react-native-camera": "^1.1.4"
   },
   "main": "./lib/index.js",
   "jest": {
