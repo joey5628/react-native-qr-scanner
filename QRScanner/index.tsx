@@ -2,7 +2,7 @@
  * @author zhangyi
  * @date 2018/5/18
  */
-import React from 'react'
+import * as React from 'react'
 import {
     View,
     Dimensions,
@@ -11,7 +11,8 @@ import {
     Image,
     Easing,
 } from "react-native";
-import { RNCamera } from 'yh-react-native-camera';
+// import { RNCamera } from 'yh-react-native-camera';
+const { RNCamera } = require('yh-react-native-camera');
 import IPropsType from './propsType'
 import styles from './styles'
 

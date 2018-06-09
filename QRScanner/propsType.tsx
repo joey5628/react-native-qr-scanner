@@ -2,7 +2,7 @@
  * @author zhangyi
  * @date 2018/5/18
  */
-import React from 'react'
+import * as React from 'react'
 
 export default interface IPropsType {
     width?: number;
