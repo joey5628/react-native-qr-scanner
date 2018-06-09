@@ -17,8 +17,7 @@ export default StyleSheet.create({
     },
 
     sideView: {
-        opacity: 0.7,
-        backgroundColor: 'black'
+        backgroundColor: 'rgba(0, 0, 0, .7)'
     },
     center: {
         flexDirection: 'row'
