@@ -6,6 +6,7 @@
 import React from 'react'
 import { Component } from 'react';
 import {
+    Alert,
     Dimensions,
     Platform,
     StyleSheet,
@@ -20,6 +21,8 @@ type Props = {};
 
 const { width: deviceWidth, height: deviceHeight } = Dimensions.get('window');
 export default class App extends Component<Props> {
+    data = '';
+
     state = {
         openLight: false
     };
@@ -33,7 +36,14 @@ export default class App extends Component<Props> {
     };
 
     onBarCodeRead = (event:any) => {
-        console.log('onBarCodeRead event:', event)
+        console.log('onBarCodeRead event:', event);
+
+        if (!this.data) {
+            this.data = event.data;
+            Alert.alert('data', this.data, [
+                {text: 'OK', onPress: () => this.data = ''},
+            ],)
+        }
     };
 
     getWidth = (width:number) => {
