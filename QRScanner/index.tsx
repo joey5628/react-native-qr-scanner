@@ -20,7 +20,6 @@ const { width: deviceWidth, height: deviceHeight } = Dimensions.get('window');
 
 export default class QRScanner extends React.Component<IPropsType, any> {
     static defaultProps = {
-        top: 165,
         width: 250,
         height: 250,
 

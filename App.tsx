@@ -3,7 +3,7 @@
  * @date 2018/5/18
  */
 
-import React from 'react'
+import * as React from 'react'
 import { Component } from 'react';
 import {
     Alert,
@@ -63,7 +63,6 @@ export default class App extends Component<Props> {
     };
 
     render() {
-        let top = this.getHeight(160);
         const height = this.getHeight(250);
         const width = this.getWidth(250);
 
@@ -74,7 +73,6 @@ export default class App extends Component<Props> {
                     <Text style={styles.headerText}>扫码组件</Text>
                 </View>
                 <QRScanner
-                    top={top}
                     height={height}
                     width={width}
                     openLight={openLight}
