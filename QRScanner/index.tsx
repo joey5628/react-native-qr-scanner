@@ -46,7 +46,9 @@ export default class QRScanner extends React.Component<IPropsType, any> {
     };
 
     componentDidMount() {
-        this.scanBarMove()
+        if (this.props.isShowScanBar) {
+            this.scanBarMove()
+        }
     }
 
     componentWillUnmount() {
