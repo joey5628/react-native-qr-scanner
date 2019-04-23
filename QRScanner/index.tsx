@@ -11,8 +11,7 @@ import {
     Image,
     Easing,
 } from "react-native";
-// import { RNCamera } from 'yh-react-native-camera';
-const { RNCamera } = require('yh-react-native-camera');
+const { RNCamera } = require('react-native-camera');
 import IPropsType from './propsType'
 import styles from './styles'
 

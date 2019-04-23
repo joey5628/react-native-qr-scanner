@@ -1,5 +1,5 @@
 {
-  "name": "rn-qr-scanner",
+  "name": "yh-rn-qr-scanner",
   "version": "0.0.11",
   "private": false,
   "scripts": {
@@ -8,7 +8,9 @@
     "compile": "rm -rf lib && tsc --skipLibCheck",
     "prepublish": "npm run compile"
   },
-  "dependencies": {},
+  "dependencies": {
+    "react-native-camera": "^2.6.0"
+  },
   "devDependencies": {
     "@types/react": "^16.3.14",
     "@types/react-native": "^0.55.14",
@@ -19,8 +21,7 @@
     "react-native": "^0.57.4",
     "react-native-typescript-transformer": "^1.2.5",
     "react-test-renderer": "16.3.1",
-    "typescript": "^2.8.3",
-    "yh-react-native-camera": "git+https://github.com/yh-yunchuang-fe/yh-react-native-camera.git#rn-camera-gradle2.3"
+    "typescript": "^2.8.3"
   },
   "main": "./lib/index.js",
   "jest": {
