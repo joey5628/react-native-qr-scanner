@@ -25,6 +25,9 @@ export default interface IPropsType {
     openLight?: boolean;
 
     onBarCodeRead?: (_x?: any) => void;
+    onCameraReady?: (_x?: any) => void;
+    onMountError?: (_x?: any) => void;
+    onStatusChange?: (_x?: any) => void;
 
     renderTopView?: () => React.ReactNode;
     renderBottomView?: () => React.ReactNode;

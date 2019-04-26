@@ -32,6 +32,9 @@ export default class QRScanner extends React.Component<IPropsType, any> {
         isShowScanBar: true,
         scanBarAnimateTime: 2500,
         onBarCodeRead: ()=>{},
+        onCameraReady: ()=>{},
+        onMountError: ()=>{},
+        onStatusChange: ()=>{},
 
         openLight: false
     };
@@ -102,7 +105,8 @@ export default class QRScanner extends React.Component<IPropsType, any> {
         const {
             top, width = 250, height = 250, maskColor, borderColor, borderWidth,
             cornerSize, cornerColor, cornerBorderWidth, openLight,
-            renderTopView, renderBottomView
+            renderTopView, renderBottomView,
+            onCameraReady, onMountError, onStatusChange
         } = this.props;
 
         const scanTop = top ? top : (deviceHeight - height) / 2;
@@ -133,6 +137,9 @@ export default class QRScanner extends React.Component<IPropsType, any> {
                     onBarCodeRead={this.onBarCodeRead}
                     permissionDialogTitle={'Permission to use camera'}
                     permissionDialogMessage={'We need your permission to use your camera phone'}
+                    onCameraReady={onCameraReady}
+                    onMountError={onMountError}
+                    onStatusChange={onStatusChange}
                 />
                 <View style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%'}}>
                     <View style={[styles.sideView, maskSty, {height: scanTop}]}>
