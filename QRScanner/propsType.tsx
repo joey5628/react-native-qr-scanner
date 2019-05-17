@@ -31,4 +31,7 @@ export default interface IPropsType {
 
     renderTopView?: () => React.ReactNode;
     renderBottomView?: () => React.ReactNode;
+
+    permissionDialogTitle: string;
+    permissionDialogMessage: string;
 }

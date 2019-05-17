@@ -36,7 +36,10 @@ export default class QRScanner extends React.Component<IPropsType, any> {
         onMountError: ()=>{},
         onStatusChange: ()=>{},
 
-        openLight: false
+        openLight: false,
+
+        permissionDialogTitle: 'Permission to use camera',
+        permissionDialogMessage: 'We need your permission to use your camera phone'
     };
 
     constructor(props:any) {
@@ -106,7 +109,8 @@ export default class QRScanner extends React.Component<IPropsType, any> {
             top, width = 250, height = 250, maskColor, borderColor, borderWidth,
             cornerSize, cornerColor, cornerBorderWidth, openLight,
             renderTopView, renderBottomView,
-            onCameraReady, onMountError, onStatusChange
+            onCameraReady, onMountError, onStatusChange,
+            permissionDialogTitle, permissionDialogMessage
         } = this.props;
 
         const scanTop = top ? top : (deviceHeight - height) / 2;
@@ -135,8 +139,8 @@ export default class QRScanner extends React.Component<IPropsType, any> {
                     type={RNCamera.Constants.Type.back}
                     flashMode={flashMode}
                     onBarCodeRead={this.onBarCodeRead}
-                    permissionDialogTitle={'Permission to use camera'}
-                    permissionDialogMessage={'We need your permission to use your camera phone'}
+                    permissionDialogTitle={permissionDialogTitle}
+                    permissionDialogMessage={permissionDialogMessage}
                     onCameraReady={onCameraReady}
                     onMountError={onMountError}
                     onStatusChange={onStatusChange}
