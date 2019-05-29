@@ -34,4 +34,5 @@ export default interface IPropsType {
 
     permissionDialogTitle: string;
     permissionDialogMessage: string;
+    androidCameraPermissionOptions: object
 }
