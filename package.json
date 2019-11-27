@@ -9,7 +9,7 @@
     "prepublish": "npm run compile"
   },
   "dependencies": {
-    "react-native-camera": "^2.6.0"
+    "react-native-camera": "*"
   },
   "devDependencies": {
     "@types/react": "^16.3.14",
